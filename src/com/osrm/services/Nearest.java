@@ -43,7 +43,7 @@ public class Nearest {
 	}
 
 	/**
-	 * Finds the nearest route to the given location, accounting for mode of travel.
+	 * Finds the nearest route to the given location, limiting the number of results to a specified number.
 	 * @param coordinates The string containing a single comma separated lon/lat pair. Only one coordinate pair is permitted.
 	 * @param maxReturns The maximum number of matches to return.
 	 * @return A JSON object containing the response code, and an array of waypoint objects.
@@ -89,7 +89,7 @@ public class Nearest {
 	}
 	
 	/**
-	 * Finds the nearest route to the given location, accounting for mode of travel.
+	 * Finds the nearest route to the given location, accounting for mode of travel and limiting the number of results to a specified number.
 	 * @param coordinates The string containing a single comma separated lon/lat pair. Only one coordinate pair is permitted.
 	 * @param profile The mode of travel. Valid values are 'car', 'bike' and 'foot'.
 	 * @return A JSON object containing the response code, and an array of waypoint objects.

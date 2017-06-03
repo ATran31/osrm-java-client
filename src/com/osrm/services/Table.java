@@ -24,7 +24,7 @@ public class Table {
 	/**
 	 * Finds the fastest route between coordinates in the supplied order.
 	 * @param coordinates The string containing comma separated lon/lat. Multiple coordinate pairs are separated by a semicolon.
-	 * @return A JSON object containing the response code, a 2d array of durations, an array of waypoint objects representing sources, and an .
+	 * @return A JSON object containing the response code, a 2d array of durations, and arrays of waypoint objects representing sources, and an destinations.
 	 */
 	public JSONObject generateTravelTimeMatrix(String coordinates) {
 		String url = String.format("http://router.project-osrm.org/table/v1/car/%s", coordinates);
@@ -48,7 +48,7 @@ public class Table {
 	 * accounting for mode of travel.
 	 * @param coordinates The string containing comma separated lon/lat. Multiple coordinate pairs are separated by a semicolon.
 	 * @param profile The mode of travel. Valid values are 'car', 'bike' and 'foot'.
-	 * @return A JSON object containing the response code, a 2d array of durations, an array of waypoint objects representing sources, and an .
+	 * @return A JSON object containing the response code, a 2d array of durations, and arrays of waypoint objects representing sources, and an destinations.
 	 */
 	public JSONObject generateTravelTimeMatrix(String coordinates, String profile) {
 		String url = String.format("http://router.project-osrm.org/table/v1/%s/%s", profile, coordinates);

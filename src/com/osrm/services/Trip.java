@@ -25,7 +25,7 @@ public class Trip {
 
 	/**
 	 * Solves the Traveling Salesman Problem using the road network and input points.
-	 * @param {String} coordinates - The string containing comma separated lon/lat. Multiple coordinate pairs are separated by a semicolon.
+	 * @param coordinates The string containing comma separated lon/lat. Multiple coordinate pairs are separated by a semicolon.
 	 * @return A JSON object containing the response code, an array of waypoint objects, and an array of route objects.
 	 */
 	public JSONObject generateTrip(String coordinates) {

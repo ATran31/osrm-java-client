@@ -25,6 +25,7 @@ public class Route {
 	 * Finds the fastest route between coordinates in the supplied order.
 	 * @param coordinates The string containing comma separated lon/lat. Multiple coordinate pairs are separated by a semicolon.
 	 * @return A JSON object containing the response code, an array of waypoint objects, and an array of route objects
+	 * 
 	 */
 	public JSONObject getFastestRoute(String coordinates) {
 		String url = String.format("http://router.project-osrm.org/route/v1/car/%s?geometries=geojson&overview=full", coordinates);
